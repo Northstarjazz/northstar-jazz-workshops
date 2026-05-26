@@ -847,6 +847,70 @@ img.duo-navy{filter:url(#duo-navy);} img.duo-coral{filter:url(#duo-coral);}
 .hero-cta-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 30px; }
 .hero-cta-note { font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--dim); }
 
+
+/* ===== JAM SESSIONS RSVP FORM ===== */
+.rsvp-intro { font-size: 16px; line-height: 1.55; color: var(--ink-2); text-align: center; max-width: 560px; margin: 0 auto 32px; }
+#jam-rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  padding: 36px 36px 32px;
+  margin: 0 auto 24px;
+  max-width: 560px;
+}
+.jam-field { display: flex; flex-direction: column; gap: 8px; }
+.jam-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+#jam-rsvp-form label {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+#jam-rsvp-form label .req { color: var(--coral); margin-left: 2px; }
+#jam-rsvp-form input[type="text"],
+#jam-rsvp-form input[type="email"] {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  padding: 12px 14px;
+  border: 1px solid var(--rule);
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 0;
+  width: 100%;
+  transition: border-color 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+#jam-rsvp-form input:focus {
+  outline: none;
+  border-color: var(--coral);
+}
+.jam-submit-row { margin-top: 6px; text-align: center; }
+#jam-rsvp-form button[type="submit"] {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: 'Lora', Georgia, serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 16px 28px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+#jam-rsvp-form button[type="submit"]:hover { background: var(--coral); }
+@media (max-width: 600px) {
+  #jam-rsvp-form { padding: 28px 22px; }
+  .jam-field-row { grid-template-columns: 1fr; gap: 22px; }
+}
+
 </style>
 <!-- Analytics: GA4 + Microsoft Clarity. Shared across every page; fold into an include once we move past hand-coded HTML. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-896FKT56BM"></script>
@@ -877,7 +941,7 @@ img.duo-navy{filter:url(#duo-navy);} img.duo-coral{filter:url(#duo-coral);}
 
 <nav class="nav">
   <div class="nav-brand">
-    <a href="#">North <span class="star">Star</span> Jazz Workshops</a>
+    <a href="/">North <span class="star">Star</span> Jazz Workshops</a>
   </div>
   <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
     <span class="nav-toggle-bar"></span>
@@ -914,7 +978,7 @@ img.duo-navy{filter:url(#duo-navy);} img.duo-coral{filter:url(#duo-coral);}
         </div>
       </div>
       <div class="hero-cta-row">
-        <a href="#rsvp-mms-form" class="btn rsvp-btn">RSVP for the next jam</a>
+        <a href="#rsvp" class="btn rsvp-btn">RSVP for the next jam</a>
         <span class="hero-cta-note">Free &middot; Second Sundays &middot; 1&ndash;4pm</span>
       </div>
     </div>
@@ -991,10 +1055,39 @@ img.duo-navy{filter:url(#duo-navy);} img.duo-coral{filter:url(#duo-coral);}
   <div class="container-narrow">
     <p class="label">Free to attend</p>
     <h2>Let us know you're <em>coming.</em></h2>
-    <div class="rsvp-actions">
-      <!-- TODO: swap href for the MMS RSVP form link when ready -->
-      <a href="#rsvp-mms-form" class="btn rsvp-btn">RSVP for the next jam</a>
-    </div>
+    <p class="rsvp-intro">A quick heads-up so we know to expect you and can print a chart with your instrument in mind. Totally optional &mdash; you're welcome to just show up too.</p>
+
+    <form name="jam-sessions-rsvp" id="jam-rsvp-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you-form">
+      <input type="hidden" name="form-name" value="jam-sessions-rsvp">
+      <input type="hidden" name="inquiry-source" value="Jam Sessions RSVP">
+      <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+      <div class="jam-field-row">
+        <div class="jam-field">
+          <label for="jam-firstName">First name<span class="req">*</span></label>
+          <input type="text" id="jam-firstName" name="firstName" required autocomplete="given-name">
+        </div>
+        <div class="jam-field">
+          <label for="jam-lastName">Last name<span class="req">*</span></label>
+          <input type="text" id="jam-lastName" name="lastName" required autocomplete="family-name">
+        </div>
+      </div>
+
+      <div class="jam-field">
+        <label for="jam-email">Email<span class="req">*</span></label>
+        <input type="email" id="jam-email" name="email" required autocomplete="email">
+      </div>
+
+      <div class="jam-field">
+        <label for="jam-instrument">What do you play?<span class="req">*</span></label>
+        <input type="text" id="jam-instrument" name="instrument" required placeholder="Trumpet, upright bass, voice, piano&hellip;">
+      </div>
+
+      <div class="jam-submit-row">
+        <button type="submit" class="btn rsvp-btn">RSVP for the next jam &rarr;</button>
+      </div>
+    </form>
+
     <p class="contact-line">Questions? Email us anytime at <a href="mailto:hello@northstarjazzworkshops.com">hello@northstarjazzworkshops.com</a>.</p>
   </div>
 </section>
