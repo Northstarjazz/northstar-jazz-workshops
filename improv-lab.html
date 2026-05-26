@@ -1388,6 +1388,13 @@ h1 em { font-style: italic; font-weight: inherit; color: var(--coral); }
         toggle.setAttribute('aria-expanded', 'false');
       });
     });
+    // Close menu on outside click/tap
+    document.addEventListener('click', function (e) {
+      if (!links.classList.contains('open')) return;
+      if (toggle.contains(e.target) || links.contains(e.target)) return;
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
   })();
 </script>
 </body>

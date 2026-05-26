@@ -1066,6 +1066,13 @@ footer a:hover { color: var(--coral); text-decoration: none; }
     links.addEventListener('click', function(e) {
       if (e.target.tagName === 'A') { links.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
     });
+    /* Close menu on outside click/tap */
+    document.addEventListener('click', function(e) {
+      if (!links.classList.contains('open')) return;
+      if (btn.contains(e.target) || links.contains(e.target)) return;
+      links.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
   })();
 </script>
 
