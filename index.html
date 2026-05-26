@@ -985,6 +985,110 @@ footer a:hover { color: var(--coral); text-decoration: none; }
   .programs .ensembles-lead .ens-lead-body h4 { font-size:26px; }
 }
 
+
+/* ===== INTAKE FORM (home #get-started) ===== */
+.cta-form-inner { max-width: 760px; }
+#form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  padding: 44px 44px 40px;
+}
+.form-section-header {
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--coral);
+  border-top: 1px solid var(--rule);
+  padding-top: 28px;
+  margin: 0;
+}
+.form-section-header:first-of-type { border-top: none; padding-top: 0; }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+#form-body label {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+#form-body label .req { color: var(--coral); margin-left: 2px; }
+#form-body label .opt {
+  color: var(--dim);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 13px;
+  margin-left: 4px;
+}
+#form-body input[type="text"],
+#form-body input[type="email"],
+#form-body input[type="tel"],
+#form-body select,
+#form-body textarea {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  padding: 12px 14px;
+  border: 1px solid var(--rule);
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 0;
+  width: 100%;
+  transition: border-color 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+#form-body input:focus, #form-body select:focus, #form-body textarea:focus {
+  outline: none;
+  border-color: var(--coral);
+}
+#form-body textarea { min-height: 100px; resize: vertical; }
+#form-body select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%231a1714' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+.radio-group, .checkbox-group { display: grid; gap: 10px; margin-top: 4px; }
+.radio-option, .checkbox-option {
+  display: flex; align-items: flex-start; gap: 10px; cursor: pointer;
+  font-size: 15px; line-height: 1.4; color: var(--ink); font-weight: 400;
+}
+.radio-option input, .checkbox-option input {
+  margin-top: 4px; accent-color: var(--coral); cursor: pointer;
+}
+.submit-row { margin-top: 12px; }
+#form-body button[type="submit"] {
+  background: var(--ink);
+  color: var(--bg);
+  font-family: 'Lora', Georgia, serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 18px 40px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+#form-body button[type="submit"]:hover { background: var(--coral); }
+.cta-form-questions {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 14px;
+  color: var(--dim);
+}
+@media (max-width: 700px) {
+  #form-body { padding: 32px 22px 32px; }
+  .field-row { grid-template-columns: 1fr; gap: 28px; }
+}
+
 </style>
 <!-- Analytics: GA4 + Microsoft Clarity. Shared across every page; fold into an include once we move past hand-coded HTML. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-896FKT56BM"></script>
@@ -1257,31 +1361,112 @@ footer a:hover { color: var(--coral); text-decoration: none; }
 </section>
 
 <section class="cta-section" id="get-started">
-  <div class="cta-inner">
+  <div class="cta-inner cta-form-inner">
 
     <div class="cta-header">
       <p class="label">Get started</p>
       <h2>Tell us a little <em>about yourself.</em></h2>
-      <p class="cta-lede">We'd love to hear about your music journey, and help you find the right way to plug in. Two easy ways to start a conversation:</p>
+      <p class="cta-lede">Takes about two minutes. Tell us where you are musically and what you're interested in &mdash; we'll follow up within a few days.</p>
     </div>
 
-    <div class="get-started-paths">
+    <form name="north-star-intake" id="form-body" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you-form">
+      <input type="hidden" name="form-name" value="north-star-intake">
+      <input type="hidden" name="inquiry-source" value="Home page">
+      <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
 
-      <a href="https://www.northstarjazzworkshops.com/get-involved#form" class="path-card reveal">
-        <p class="path-label">Option 1</p>
-        <h3>Fill out the <em>form.</em></h3>
-        <p>Takes about 2 minutes. Tell us where you are musically and what you're interested in &mdash; we'll follow up within a few days.</p>
-        <span class="path-btn">Start the form &rarr;</span>
-      </a>
+      <p class="form-section-header">The basics</p>
 
-      <a href="https://calendly.com/hello-northstarjazzworkshops/30min" target="_blank" rel="noopener" class="path-card reveal">
-        <p class="path-label">Option 2</p>
-        <h3>Book a <em>quick call.</em></h3>
-        <p>Pick a 15&ndash;30 minute slot that works for you. We'll chat directly, no pressure, no commitment.</p>
-        <span class="path-btn">Pick a time &rarr;</span>
-      </a>
+      <div class="field-row">
+        <div class="field">
+          <label for="firstName">First name<span class="req">*</span></label>
+          <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+        </div>
+        <div class="field">
+          <label for="lastName">Last name<span class="req">*</span></label>
+          <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+        </div>
+      </div>
 
-    </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="email">Email<span class="req">*</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="phone">Phone<span class="req">*</span></label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="pronouns">Pronouns<span class="opt">optional</span></label>
+        <input type="text" id="pronouns" name="pronouns" placeholder="she/her, he/him, they/them, etc.">
+      </div>
+
+      <p class="form-section-header">Tell us about your music</p>
+
+      <div class="field">
+        <label for="instrument">What instrument do you play?<span class="req">*</span></label>
+        <input type="text" id="instrument" name="instrument" required placeholder="Trumpet, upright bass, voice, piano&hellip;">
+      </div>
+
+      <div class="field">
+        <label>Where are you in your musical journey?<span class="req">*</span></label>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="journey" value="getting-started" required><span>Just getting started with my instrument</span></label>
+          <label class="radio-option"><input type="radio" name="journey" value="returning"><span>Returning after a long break</span></label>
+          <label class="radio-option"><input type="radio" name="journey" value="newer-to-jazz"><span>Comfortable on my instrument, newer to jazz</span></label>
+          <label class="radio-option"><input type="radio" name="journey" value="some-jazz"><span>Have some jazz experience and want to deepen it</span></label>
+          <label class="radio-option"><input type="radio" name="journey" value="experienced"><span>Experienced player looking for the right musical setting</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="goals">What are you hoping to get out of this?<span class="opt">optional</span></label>
+        <textarea id="goals" name="goals" placeholder="e.g., I want to get back into playing, build improv skills, find a group to play with regularly&hellip;"></textarea>
+      </div>
+
+      <div class="field">
+        <label>What kinds of things are you interested in?<span class="opt">select any that apply</span></label>
+        <div class="checkbox-group">
+          <label class="checkbox-option"><input type="checkbox" name="interests" value="ensembles"><span>Small group ensembles</span></label>
+          <label class="checkbox-option"><input type="checkbox" name="interests" value="classes"><span>Group classes (Foundations, Jazz Guitar, Voice, etc.)</span></label>
+          <label class="checkbox-option"><input type="checkbox" name="interests" value="lessons"><span>Private lessons</span></label>
+          <label class="checkbox-option"><input type="checkbox" name="interests" value="jams"><span>Jam sessions</span></label>
+          <label class="checkbox-option"><input type="checkbox" name="interests" value="workshops"><span>Workshops &amp; masterclasses</span></label>
+          <label class="checkbox-option"><input type="checkbox" name="interests" value="performance"><span>Performance opportunities</span></label>
+          <label class="checkbox-option"><input type="checkbox" name="interests" value="not-sure"><span>Not sure yet &mdash; happy to talk through it</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="notes">Anything else you'd like us to know?<span class="opt">optional</span></label>
+        <textarea id="notes" name="notes" placeholder="Schedule constraints, past experience, questions, anything at all."></textarea>
+      </div>
+
+      <p class="form-section-header">One last thing</p>
+
+      <div class="field">
+        <label for="referral">How did you hear about us?<span class="opt">optional</span></label>
+        <select id="referral" name="referral">
+          <option value="">Select one&hellip;</option>
+          <option value="word-of-mouth">A friend or fellow musician</option>
+          <option value="kbem">KBEM Jazz 88.5</option>
+          <option value="social">Facebook or Instagram</option>
+          <option value="instructor">An instructor or teacher</option>
+          <option value="flyer">A flyer or local business</option>
+          <option value="event">A workshop or event</option>
+          <option value="other">Something else</option>
+        </select>
+      </div>
+
+      <div class="submit-row">
+        <button type="submit">Send &rarr;</button>
+      </div>
+
+    </form>
+
+    <p class="cta-form-questions">Questions? Email us anytime at <a href="mailto:hello@northstarjazzworkshops.com">hello@northstarjazzworkshops.com</a>.</p>
 
   </div>
 </section>
