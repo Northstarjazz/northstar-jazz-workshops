@@ -1053,6 +1053,31 @@ h1 em { font-style: italic; font-weight: inherit; color: var(--coral); }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; transition: none !important; } }
 
+
+  /* Enrollment widget (MyMusicStaff embed) — added when widget went live for Open Spaces */
+  .enroll-widget {
+    max-width: 640px;
+    margin: 0 auto 28px;
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(26,23,20,0.06);
+    overflow: visible;
+  }
+  .enroll-widget iframe { width: 100% !important; max-width: 100%; border: 0; display: block; }
+  .enroll-widget * { max-width: 100%; box-sizing: border-box; }
+  @media (max-width: 720px) {
+    .enroll-widget { max-width: 100%; border-radius: 8px; }
+  }
+  .enroll-alt {
+    text-align: center;
+    font-size: 16px;
+    color: var(--ink-2);
+    margin: 0 0 18px;
+  }
+  .enroll-alt a { color: var(--coral); border-bottom: 1px solid currentColor; padding-bottom: 1px; text-decoration: none; }
+  .enroll-alt a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
 </style>
 <!-- Analytics: GA4 + Microsoft Clarity. Shared across every page; fold into an include once we move past hand-coded HTML. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-896FKT56BM"></script>
@@ -1318,20 +1343,12 @@ h1 em { font-style: italic; font-weight: inherit; color: var(--coral); }
 
     <p class="intro">Tuition is $450, paid as three monthly installments of $150. Your first payment confirms your enrollment in the August cohort.</p>
 
-    <div class="paths">
-      <div class="path-card">
-        <p class="path-label">Ready to enroll</p>
-        <h3>Sign up &amp; pay your deposit</h3>
-        <p>Reserve your spot in the August cohort.</p>
-        <a href="https://www.northstarjazzworkshops.com/classes-workshops/open-spaces-ensemble" target="_blank" rel="noopener noreferrer" class="btn">Enroll Now</a>
-      </div>
-      <div class="path-card">
-        <p class="path-label">Still deciding</p>
-        <h3>Book a quick call</h3>
-        <p>Talk it through with us — 15 minutes, no pressure.</p>
-        <a href="https://calendly.com/hello-northstarjazzworkshops/30min" target="_blank" rel="noopener noreferrer" class="btn secondary">Book a Call</a>
-      </div>
+    <div class="enroll-widget">
+      <!-- MyMusicStaff Sign-Up widget: Open Spaces Ensemble (block wbb_zp7MZJf). Collects info + $150 deposit. -->
+      <script src="https://app.mymusicstaff.com/Widget/v4/Widget.ashx?settings=eyJTY2hvb2xJRCI6InNjaF9mRmZKYyIsIldlYnNpdGVJRCI6Indic181eVlKMCIsIldlYnNpdGVCbG9ja0lEIjoid2JiX3pwN01aSmYifQ=="></script>
     </div>
+
+    <p class="enroll-alt">Still thinking it through? <a href="https://calendly.com/hello-northstarjazzworkshops/30min" target="_blank" rel="noopener noreferrer">Book a quick call</a> and we'll help you figure out if it's the right fit.</p>
 
     <p class="contact-line">Questions? Email us anytime at <a href="mailto:hello@northstarjazzworkshops.com">hello@northstarjazzworkshops.com</a>.</p>
   </div>
