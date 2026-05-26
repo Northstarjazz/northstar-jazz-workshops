@@ -1,0 +1,4 @@
+# Old MyMusicStaff paths -> new custom URLs
+/welcome              /                                             301
+/classes-workshops    /programs                                     301
+/member-portal        https://portal.northstarjazzworkshops.com     301

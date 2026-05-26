@@ -1,0 +1,12 @@
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# Editor crud
+.vscode/
+.idea/
+*.swp
+
+# Node / build artifacts (we have no build, but future-proof)
+node_modules/
+.netlify/

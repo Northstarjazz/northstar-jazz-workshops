@@ -1,0 +1,12 @@
+# Netlify config for North Star Jazz Workshops
+# Static site: no build step, publish directory is the repo root.
+
+[build]
+  publish = "."
+
+# STAGING: keep search engines out until real launch.
+# At launch, DELETE the [[headers]] block below so the site can be indexed.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
