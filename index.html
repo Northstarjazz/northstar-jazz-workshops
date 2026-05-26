@@ -1084,6 +1084,22 @@ footer a:hover { color: var(--coral); text-decoration: none; }
   font-size: 14px;
   color: var(--dim);
 }
+.cta-skip {
+  text-align: center;
+  margin: 18px 0 32px;
+  font-size: 15px;
+  color: var(--ink-2);
+}
+.cta-skip a {
+  color: var(--coral);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+  text-decoration: none;
+}
+.cta-skip a:hover {
+  border-bottom-color: var(--ink);
+  color: var(--ink);
+}
 @media (max-width: 700px) {
   #form-body { padding: 32px 22px 32px; }
   .field-row { grid-template-columns: 1fr; gap: 28px; }
@@ -1366,7 +1382,8 @@ footer a:hover { color: var(--coral); text-decoration: none; }
     <div class="cta-header">
       <p class="label">Get started</p>
       <h2>Tell us a little <em>about yourself.</em></h2>
-      <p class="cta-lede">Takes about two minutes. Tell us where you are musically and what you're interested in &mdash; we'll follow up within a few days.</p>
+      <p class="cta-lede">Tell us where you are musically and what you're interested in &mdash; we'll follow up within a few days.</p>
+      <p class="cta-skip">Prefer to talk? <a href="https://calendly.com/hello-northstarjazzworkshops/30min" target="_blank" rel="noopener">Book a quick call instead &rarr;</a></p>
     </div>
 
     <form name="north-star-intake" id="form-body" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you-form">
