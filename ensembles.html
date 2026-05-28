@@ -899,7 +899,10 @@ footer a:hover { color: var(--coral); text-decoration: none; }
 
 /* ===== ENSEMBLES PAGE ===== */
 
-.ens-cta .ens-paths { display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; max-width:1080px; margin:44px auto 0; text-align:left; }
+.ens-cta .ens-paths { display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:780px; margin:44px auto 0; text-align:left; }
+.ens-cta .ens-call-line { font-size:15px; color:rgba(241,235,220,0.75); margin:28px 0 0; text-align:center; }
+.ens-cta .ens-call-line a { color:var(--coral); border-bottom:1px solid rgba(208,67,56,0.4); padding-bottom:1px; }
+.ens-cta .ens-call-line a:hover { border-bottom-color:var(--coral); }
 .ens-cta .ens-path { background:rgba(241,235,220,0.06); border:1px solid rgba(241,235,220,0.16); padding:34px 32px; display:flex; flex-direction:column; }
 .ens-cta .ens-path h3 { font-family:'Lora',serif; font-weight:700; font-size:22px; color:var(--bg); margin:0 0 12px; }
 .ens-cta .ens-path p { font-size:15.5px; line-height:1.6; color:rgba(241,235,220,0.8); margin:0 0 24px; flex:1; max-width:none; }
@@ -1072,7 +1075,7 @@ footer a:hover { color: var(--coral); text-decoration: none; }
     <h1>Find <em>your band.</em></h1>
     <p class="sub">A small group that meets twice a month, coached by a Twin Cities jazz musician.</p>
     <div class="btn-row">
-      <a href="/#get-started" class="btn-primary">Tell us you're interested &rarr;</a>
+      <a href="#ens-cta" class="btn-primary">Tell us you're interested &rarr;</a>
     </div>
   </div>
 </header>
@@ -1131,14 +1134,9 @@ footer a:hover { color: var(--coral); text-decoration: none; }
       <p>Already know it's a fit? Reserve your spot in the next opening &mdash; submit your deposit below.</p>
       <a href="#enroll" class="btn-primary">Submit deposit &rarr;</a>
     </div>
-
-    <div class="ens-path">
-      <p class="ens-path-label">Want to talk first</p>
-      <h3>Schedule a quick call</h3>
-      <p>Talk it through with us &mdash; 15 minutes, no pressure.</p>
-      <a href="https://calendly.com/hello-northstarjazzworkshops/30min" target="_blank" rel="noopener noreferrer" class="btn-primary">Book a call &rarr;</a>
-    </div>
   </div>
+
+  <p class="ens-call-line">Want to talk it through first? <a href="https://calendly.com/hello-northstarjazzworkshops/30min" target="_blank" rel="noopener noreferrer">Book a quick call &rarr;</a></p>
 </div></section>
 
 <section class="enroll" id="enroll">
