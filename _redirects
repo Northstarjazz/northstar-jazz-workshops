@@ -2,3 +2,11 @@
 /welcome              /                                             301
 /classes-workshops    /programs                                     301
 /member-portal        https://portal.northstarjazzworkshops.com     301
+
+# Old section index pages -> nearest live page
+/community-programs   /community-programs/jam-sessions              301
+/community-programs/  /community-programs/jam-sessions              301
+
+# Old program pages -> new program pages
+/community-programs/small-group-jazz-ensembles  /ensembles          301
+/community-programs/private-instruction         /private-lessons    301
