@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Don't index the post-form-submission thank-you page
+Disallow: /thank-you-form
+
+# /get-involved is a paid-ad landing page; not for organic indexing
+Disallow: /get-involved
+
+Sitemap: https://northstarjazzworkshops.com/sitemap.xml
