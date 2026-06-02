@@ -910,7 +910,7 @@ img.duo-navy{filter:url(#duo-navy);} img.duo-coral{filter:url(#duo-coral);}
 <section style="background:#1a1714; color:#f1ebdc; padding:24px; text-align:center;">
   <div style="max-width:900px; margin:0 auto; font-family:'Lora',Georgia,serif; font-size:15px; letter-spacing:0.04em;">
     <span style="color:#d04338; font-weight:700; font-size:18px;">★★★★★</span>
-    &nbsp;&nbsp;<strong>4.9</strong> from 30+ Google reviews
+    &nbsp;&nbsp;<strong>5.0</strong> from 30+ Google reviews
     &nbsp;&middot;&nbsp; <strong>6 sessions</strong> &middot; small group
     &nbsp;&middot;&nbsp; <strong>Jazz Central Studios</strong>, Minneapolis
   </div>
@@ -1189,5 +1189,74 @@ img.duo-navy{filter:url(#duo-navy);} img.duo-coral{filter:url(#duo-coral);}
       toggle.setAttribute('aria-expanded', 'false');
     });
   })();
+</script>
+
+<!-- Exit-intent capture modal -->
+<div id="exit-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(26,23,20,0.78); z-index:9999; align-items:center; justify-content:center; padding:24px; box-sizing:border-box;">
+  <div style="background:#f1ebdc; max-width:520px; width:100%; padding:48px 40px; position:relative; border-top:6px solid #d04338; font-family:'Lora',Georgia,serif;">
+    <button type="button" id="exit-modal-close" aria-label="Close" style="position:absolute; top:14px; right:18px; background:none; border:0; font-size:28px; line-height:1; color:#6b5f4c; cursor:pointer; padding:6px; font-family:'Lora',Georgia,serif;">×</button>
+    <p style="font-size:12px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#d04338; margin:0 0 14px;">Before you go</p>
+    <h2 style="font-family:'Lora',Georgia,serif; font-weight:700; font-size:32px; line-height:1.05; letter-spacing:-0.02em; color:#1a1714; margin:0 0 18px;">Not sure if this is <em style="color:#d04338; font-weight:400;">the right fit</em>?</h2>
+    <p style="font-size:17px; line-height:1.5; color:#3d352a; margin:0 0 26px;">Book a quick 15-minute call. No pitch &mdash; just a conversation about where you are in your playing and whether Foundations is the right place to start. We'd rather you land somewhere that fits than enroll in the wrong thing.</p>
+    <a href="https://calendly.com/hello-northstarjazzworkshops/15min" target="_blank" rel="noopener" style="display:inline-block; background:#1a1714; color:#f1ebdc; padding:18px 32px; font-family:'Lora',Georgia,serif; font-weight:700; font-size:13px; letter-spacing:0.16em; text-transform:uppercase; text-decoration:none; margin-bottom:16px;" onclick="document.getElementById('exit-modal').style.display='none'; sessionStorage.setItem('nsjw-exit-shown','1');">Book a 15-min call &rarr;</a>
+    <p style="font-size:14px; color:#6b5f4c; margin:8px 0 0;">
+      Or email us anytime at <a href="mailto:hello@northstarjazzworkshops.com" style="color:#d04338;">hello@northstarjazzworkshops.com</a>.
+    </p>
+  </div>
+</div>
+
+<script>
+(function() {
+  var SHOWN_KEY = 'nsjw-exit-shown';
+  var modal = document.getElementById('exit-modal');
+  var closeBtn = document.getElementById('exit-modal-close');
+  var hasShown = false;
+
+  function showModal() {
+    if (hasShown || sessionStorage.getItem(SHOWN_KEY)) return;
+    hasShown = true;
+    sessionStorage.setItem(SHOWN_KEY, '1');
+    modal.style.display = 'flex';
+  }
+  function hideModal() {
+    modal.style.display = 'none';
+  }
+  closeBtn.addEventListener('click', hideModal);
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) hideModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') hideModal();
+  });
+
+  // DESKTOP: trigger when mouse leaves top of viewport
+  // (and only after some minimum dwell time, so it doesn't fire on accidental scroll-back)
+  var dwellOk = false;
+  setTimeout(function() { dwellOk = true; }, 5000);
+  document.addEventListener('mouseout', function(e) {
+    if (!dwellOk) return;
+    if (e.relatedTarget) return;            // moved to another element
+    if (e.clientY > 5) return;              // not toward the top
+    showModal();
+  });
+
+  // MOBILE: trigger when user scrolls back up significantly after scrolling down
+  // (suggests they're heading toward the back button)
+  if (window.matchMedia('(max-width: 760px)').matches) {
+    var lastY = window.scrollY;
+    var maxY = window.scrollY;
+    var scrolledDeep = false;
+    window.addEventListener('scroll', function() {
+      var y = window.scrollY;
+      if (y > maxY) maxY = y;
+      if (maxY > 800) scrolledDeep = true;
+      // Rapid upward scroll after deep scroll
+      if (scrolledDeep && (lastY - y) > 200) {
+        showModal();
+      }
+      lastY = y;
+    }, { passive: true });
+  }
+})();
 </script>
 </body></html>
