@@ -3,9 +3,11 @@
 /classes-workshops    /programs                                     301
 /member-portal        https://app.mymusicstaff.com/Default.aspx     301
 
-# Old section index pages -> nearest live page
-/community-programs   /community-programs/jam-sessions              301
-/community-programs/  /community-programs/jam-sessions              301
+# Old MyMusicStaff community-programs index -> homepage
+# (was pointing to jam-sessions, but Google was using it as the canonical brand result
+# so branded search traffic landed on jams instead of home. Re-pointed to / on 2026-06-13.)
+/community-programs   /                                             301
+/community-programs/  /                                             301
 
 # Old program pages -> new program pages
 /community-programs/small-group-jazz-ensembles  /ensembles          301
