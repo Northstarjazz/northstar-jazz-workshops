@@ -12,18 +12,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
-<!-- GA4 -->
+<!-- Google tag (GA4 + Google Ads) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-896FKT56BM"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-896FKT56BM');
-  /* Fire a GA4 conversion event so this also flows through the GA4-linked Submit lead form action. */
+  gtag('config', 'AW-1683939801');
+
+  /* GA4 conversion event — feeds the existing GA4-linked Submit lead form action. */
   gtag('event', 'submit_lead_form', {
     'event_category': 'engagement',
     'event_label': 'play_landing_page',
     'send_to': 'G-896FKT56BM'
+  });
+
+  /* Google Ads conversion event — Submit lead form (play page).
+     Conversion action ID: AW-1683939801/paRICJSttcAcEPuk090-
+     Fires on page load (i.e., immediately when /thank-you-mms is reached). */
+  gtag('event', 'conversion', {
+    'send_to': 'AW-1683939801/paRICJSttcAcEPuk090-',
+    'value': 1.0,
+    'currency': 'USD'
   });
 </script>
 
@@ -35,19 +46,6 @@
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   })(window, document, "clarity", "script", "wtvei5x13g");
 </script>
-
-<!-- TODO: Google Ads Conversion Tag goes here once conversion action is rebuilt
-     in Google Ads. Looks roughly like:
-     <script>
-       gtag('event', 'conversion', {
-         'send_to': 'AW-XXXXXXXXX/YYYYYYYYY',
-         'value': 10.0,
-         'currency': 'USD'
-       });
-     </script>
-     The exact AW-XXX tag will come from Google Ads → Goals → Conversions
-     → Submit lead form → Tag setup → Event snippet. Pin the GCLID for
-     enhanced conversion attribution. -->
 
 <style>
   :root {
