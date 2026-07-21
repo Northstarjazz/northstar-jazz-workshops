@@ -924,6 +924,65 @@
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   })(window, document, "clarity", "script", "wtvei5x13g");
 </script>
+<style id="fh-nav-css">
+.fh-nav { position: sticky; top: 18px; z-index: 1200; margin: 18px auto; width: calc(100% - 36px); max-width: 1320px;
+  background: #a6c0d6; border-radius: 16px; box-shadow: 0 4px 16px rgba(26,23,20,0.14), 0 1px 3px rgba(26,23,20,0.06);
+  padding: 14px 24px; display: flex; align-items: center; gap: 26px; font-family: 'Lora', Georgia, serif; }
+.fh-brand { font-family: 'Lora', Georgia, serif; font-weight: 700; font-size: 19px; color: #1a1714; text-decoration: none; letter-spacing: -0.005em; white-space: nowrap; flex-shrink: 0; }
+.fh-brand .star { color: #d04338; font-style: italic; font-weight: 500; }
+.fh-brand:hover { opacity: 0.85; }
+.fh-links { display: flex; align-items: center; gap: 22px; margin: 0 auto; }
+.fh-links a { font-family: 'Lora', Georgia, serif; font-weight: 500; font-size: 15px; color: #1a1714; text-decoration: none; position: relative; padding: 6px 2px; transition: color 0.2s ease; }
+.fh-links a::after { content: ''; position: absolute; left: 50%; bottom: 0; width: 0; height: 1.5px; background: #d04338; transition: width 0.25s ease, left 0.25s ease; }
+.fh-links a:hover { color: #d04338; }
+.fh-links a:hover::after { width: calc(100% - 4px); left: 2px; }
+.fh-ctas { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.fh-cta { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; padding: 10px 20px; border-radius: 2px; transition: all 0.2s ease; white-space: nowrap; }
+.fh-cta--outline { color: #1a1714; background: transparent; border: 1.5px solid #1a1714; }
+.fh-cta--outline:hover { background: #1a1714; color: #f1ebdc; }
+.fh-cta--filled { color: #f1ebdc; background: #d04338; border: 1.5px solid #d04338; }
+.fh-cta--filled:hover { background: #b03328; border-color: #b03328; }
+.fh-hamb { display: none; background: none; border: 0; padding: 6px; cursor: pointer; color: #1a1714; transition: color 0.2s ease; }
+.fh-hamb svg { display: block; }
+.fh-hamb:hover { color: #d04338; }
+@media (max-width: 1080px) { .fh-links, .fh-ctas { display: none; } .fh-hamb { display: block; margin-left: auto; } .fh-nav { padding: 12px 18px; top: 12px; margin: 12px auto; width: calc(100% - 24px); } }
+.fh-overlay { position: fixed; inset: 0; background: #1a1714; color: #f1ebdc; z-index: 2000; display: flex; flex-direction: column;
+  opacity: 0; visibility: hidden; transition: opacity 0.35s cubic-bezier(0.22,0.61,0.36,1), visibility 0s linear 0.35s; }
+body.fh-menu-open .fh-overlay { opacity: 1; visibility: visible; transition: opacity 0.35s cubic-bezier(0.22,0.61,0.36,1), visibility 0s linear 0s; }
+body.fh-menu-open { overflow: hidden; }
+.fh-menu-top { display: flex; align-items: center; justify-content: flex-end; padding: 24px 28px 8px; }
+.fh-close { background: none; border: 0; cursor: pointer; padding: 8px; color: #f1ebdc; transition: color 0.2s ease, transform 0.2s ease; }
+.fh-close:hover { color: #d04338; transform: rotate(90deg); }
+.fh-close svg { display: block; }
+.fh-menu-body { flex: 1; overflow-y: auto; display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; padding: 26px 0 20px 28px; width: 100%; }
+.fh-item { opacity: 0; transform: translateX(-18px); transition: opacity 0.45s cubic-bezier(0.22,0.61,0.36,1), transform 0.45s cubic-bezier(0.22,0.61,0.36,1); }
+body.fh-menu-open .fh-item { opacity: 1; transform: translateX(0); }
+body.fh-menu-open .fh-item:nth-child(1) { transition-delay: 0.06s; }
+body.fh-menu-open .fh-item:nth-child(2) { transition-delay: 0.12s; }
+body.fh-menu-open .fh-item:nth-child(3) { transition-delay: 0.18s; }
+body.fh-menu-open .fh-item:nth-child(4) { transition-delay: 0.24s; }
+body.fh-menu-open .fh-item:nth-child(5) { transition-delay: 0.30s; }
+body.fh-menu-open .fh-item:nth-child(6) { transition-delay: 0.36s; }
+.fh-row { display: inline-flex; align-items: baseline; gap: 14px; padding: 10px 0; font-family: 'Lora', Georgia, serif; font-weight: 700;
+  font-size: clamp(34px, 8vw, 52px); line-height: 1.02; letter-spacing: -0.02em; color: #f1ebdc; text-decoration: none; background: none; border: 0; cursor: pointer; text-align: left; transition: color 0.2s ease; }
+.fh-row:hover { color: #d04338; }
+.fh-plus { font-family: 'Lora', Georgia, serif; font-weight: 400; font-size: 0.55em; color: #d04338; display: inline-block; transition: transform 0.3s cubic-bezier(0.22,0.61,0.36,1); transform-origin: center; position: relative; top: -0.15em; }
+.fh-item.is-open .fh-plus { transform: rotate(45deg); }
+.fh-sub { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.22,0.61,0.36,1); }
+.fh-item.is-open .fh-sub { max-height: 640px; }
+.fh-sub-inner { padding: 4px 0 18px 22px; border-left: 2px solid #d04338; margin: 4px 0 8px 4px; display: flex; flex-direction: column; gap: 10px; }
+.fh-sub a { font-family: 'Lora', Georgia, serif; font-weight: 500; font-size: 17px; color: rgba(241,235,220,0.78); text-decoration: none; padding: 4px 0; transition: color 0.2s ease, padding-left 0.2s ease; }
+.fh-sub a:hover { color: #d04338; padding-left: 6px; }
+.fh-sub a .fh-badge { font-family: 'Lora', Georgia, serif; font-size: 11px; font-style: italic; color: rgba(241,235,220,0.45); margin-left: 8px; font-weight: 400; }
+.fh-foot { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; padding: 26px 28px 30px; border-top: 1px solid rgba(241,235,220,0.14); }
+.fh-foot-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+.fh-foot .fh-cta { font-size: 14px; padding: 14px 28px; }
+.fh-foot .fh-cta--outline { color: #f1ebdc; border-color: #f1ebdc; }
+.fh-foot .fh-cta--outline:hover { background: #f1ebdc; color: #1a1714; }
+.fh-contact { margin: 14px 0 0; font-size: 14px; color: rgba(241,235,220,0.55); font-family: 'Lora', Georgia, serif; }
+.fh-contact a { color: #d04338; text-decoration: none; font-weight: 600; }
+.fh-contact a:hover { text-decoration: underline; }
+</style>
 </head>
 
 <body>
@@ -937,12 +996,60 @@
   <em>Now enrolling:</em> ensembles, group classes, private lessons &amp; jam sessions &mdash; for jazz musicians at every level.
 </div>
 
-<nav class="nav">
-  <div class="nav-brand">
-    <a href="/">North <span class="star">Star</span> Jazz Workshops</a>
+<nav class="fh-nav" aria-label="Primary">
+  <a class="fh-brand" href="/">North <span class="star">Star</span> Jazz Workshops</a>
+  <div class="fh-links">
+    <a href="/programs">Programs</a>
+    <a href="/ensembles">Ensembles</a>
+    <a href="/community-programs/jam-sessions">Jam Sessions</a>
+    <a href="/events">Events</a>
+    <a href="/instructors">Instructors</a>
+    <a href="/member-portal">Member Portal</a>
   </div>
-  <a href="#form" class="nav-cta">Get Started</a>
+  <div class="fh-ctas">
+    <a class="fh-cta fh-cta--outline" href="https://calendly.com/hello-northstarjazzworkshops/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+    <a class="fh-cta fh-cta--filled" href="/#get-started">Get Started</a>
+  </div>
+  <button class="fh-hamb" aria-label="Open menu" id="fh-open">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+  </button>
 </nav>
+
+<div class="fh-overlay" id="fh-overlay" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="fh-menu-top">
+    <button class="fh-close" aria-label="Close menu" id="fh-close">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="fh-menu-body" aria-label="Site">
+    <div class="fh-item">
+      <button class="fh-row" type="button" aria-expanded="false" data-fh-toggle>Programs <span class="fh-plus" aria-hidden="true">+</span></button>
+      <div class="fh-sub"><div class="fh-sub-inner">
+        <a href="/foundations-of-jazz">Foundations of Jazz</a>
+        <a href="/improv-lab">Improv Lab</a>
+        <a href="/jazz-singers-playground">Jazz Singer&rsquo;s Playground</a>
+        <a href="/open-spaces-ensemble">Open Spaces Ensemble</a>
+        <a href="/private-lessons">Private Lessons</a>
+        <a href="/jazz-guitar-foundations">Jazz Guitar Foundations <span class="fh-badge">not enrolling</span></a>
+        <a href="/jazz-voice-lab">Jazz Voice Lab <span class="fh-badge">waitlist</span></a>
+        <a href="/programs">All programs &rarr;</a>
+      </div></div>
+    </div>
+    <div class="fh-item"><a class="fh-row" href="/ensembles">Ensembles</a></div>
+    <div class="fh-item"><a class="fh-row" href="/community-programs/jam-sessions">Jam Sessions</a></div>
+    <div class="fh-item"><a class="fh-row" href="/events">Events</a></div>
+    <div class="fh-item"><a class="fh-row" href="/instructors">Instructors</a></div>
+    <div class="fh-item"><a class="fh-row" href="/member-portal">Member Portal</a></div>
+  </nav>
+  <div class="fh-foot">
+    <div class="fh-foot-ctas">
+      <a class="fh-cta fh-cta--outline" href="https://calendly.com/hello-northstarjazzworkshops/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+      <a class="fh-cta fh-cta--filled" href="/#get-started">Get Started &rarr;</a>
+    </div>
+    <p class="fh-contact"><a href="mailto:hello@northstarjazzworkshops.com">hello@northstarjazzworkshops.com</a> &middot; 651-587-2197</p>
+  </div>
+</div>
+
 
 <section class="hero">
   <div class="hero-bg">
@@ -1341,5 +1448,27 @@
   })();
 </script>
 
+<script id="fh-nav-js">
+(function() {
+  var openBtn = document.getElementById('fh-open');
+  var closeBtn = document.getElementById('fh-close');
+  var overlay = document.getElementById('fh-overlay');
+  if (!openBtn || !overlay) return;
+  function open() { document.body.classList.add('fh-menu-open'); }
+  function close() { document.body.classList.remove('fh-menu-open'); }
+  openBtn.addEventListener('click', open);
+  closeBtn && closeBtn.addEventListener('click', close);
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+  overlay.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', function() { setTimeout(close, 100); }); });
+  overlay.querySelectorAll('[data-fh-toggle]').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var item = btn.closest('.fh-item');
+      var isOpen = item.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
+})();
+</script>
 </body>
 </html>
