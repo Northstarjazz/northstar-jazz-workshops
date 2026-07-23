@@ -1088,25 +1088,28 @@ h1 em { font-style: italic; font-weight: inherit; color: var(--coral); }
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   })(window, document, "clarity", "script", "wtvei5x13g");
 </script>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 <style id="fh-nav-css">
 .fh-nav { position: sticky; top: 0; z-index: 1200; margin: 0; width: 100%;
-  background: #a6c0d6; border-bottom: 1px solid rgba(0,0,0,0.05);
-  padding: 14px 32px; display: flex; align-items: center; gap: 26px; font-family: 'Lora', Georgia, serif; }
-.fh-brand { font-family: 'Lora', Georgia, serif; font-weight: 700; font-size: 19px; color: #1a1714; text-decoration: none; letter-spacing: -0.005em; white-space: nowrap; flex-shrink: 0; }
-.fh-brand .star { color: #d04338; font-style: italic; font-weight: 500; }
-.fh-brand:hover { opacity: 0.85; }
+  background: #000000; border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 12px 32px; display: flex; align-items: center; gap: 26px; font-family: 'Lora', Georgia, serif; }
+.fh-brand { font-family: 'Lora', Georgia, serif; font-weight: 700; font-size: 19px; color: #ffffff; text-decoration: none; letter-spacing: -0.005em; white-space: nowrap; flex-shrink: 0; display: inline-flex; flex-direction: column; align-items: flex-start; }
+.fh-brand .fh-top { display: inline-flex; align-items: baseline; gap: 6px; line-height: 1; }
+.fh-brand .fh-jazz { font-family: 'Caveat', cursive; font-weight: 600; font-size: 1.3em; color: #d04338; line-height: 0.8; transform: translateY(1px); }
+.fh-brand .fh-sub { font-size: 19px; font-weight: 700; letter-spacing: -0.005em; color: #ffffff; line-height: 1; margin-top: 3px; }
+.fh-brand:hover { opacity: 0.88; }
 .fh-links { display: flex; align-items: center; gap: 22px; margin: 0 auto; }
-.fh-links a { font-family: 'Lora', Georgia, serif; font-weight: 500; font-size: 15px; color: #1a1714; text-decoration: none; position: relative; padding: 6px 2px; transition: color 0.2s ease; }
+.fh-links a { font-family: 'Lora', Georgia, serif; font-weight: 500; font-size: 15px; color: #ffffff; text-decoration: none; position: relative; padding: 6px 2px; transition: color 0.2s ease; }
 .fh-links a::after { content: ''; position: absolute; left: 50%; bottom: 0; width: 0; height: 1.5px; background: #d04338; transition: width 0.25s ease, left 0.25s ease; }
 .fh-links a:hover { color: #d04338; }
 .fh-links a:hover::after { width: calc(100% - 4px); left: 2px; }
 .fh-ctas { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 .fh-cta { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; padding: 10px 20px; border-radius: 2px; transition: all 0.2s ease; white-space: nowrap; }
-.fh-cta--outline { color: #1a1714; background: transparent; border: 1.5px solid #1a1714; }
-.fh-cta--outline:hover { background: #1a1714; color: #f1ebdc; }
+.fh-cta--outline { color: #ffffff; background: transparent; border: 1.5px solid #ffffff; }
+.fh-cta--outline:hover { background: #ffffff; color: #000000; }
 .fh-cta--filled { color: #f1ebdc; background: #d04338; border: 1.5px solid #d04338; }
 .fh-cta--filled:hover { background: #b03328; border-color: #b03328; }
-.fh-hamb { display: none; background: none; border: 0; padding: 6px; cursor: pointer; color: #1a1714; transition: color 0.2s ease; }
+.fh-hamb { display: none; background: none; border: 0; padding: 6px; cursor: pointer; color: #ffffff; transition: color 0.2s ease; }
 .fh-hamb svg { display: block; }
 .fh-hamb:hover { color: #d04338; }
 @media (max-width: 1080px) { .fh-links, .fh-ctas { display: none; } .fh-hamb { display: block; margin-left: auto; } .fh-nav { padding: 12px 20px; } }
@@ -1160,7 +1163,7 @@ body.fh-menu-open .fh-item:nth-child(6) { transition-delay: 0.36s; }
 </div>
 
 <nav class="fh-nav" aria-label="Primary">
-  <a class="fh-brand" href="/">North <span class="star">Star</span> Jazz Workshops</a>
+  <a class="fh-brand" href="/"><span class="fh-top">North Star <span class="fh-jazz">Jazz</span></span><span class="fh-sub">Workshops</span></a>
   <div class="fh-links">
     <a href="/programs">Programs</a>
     <a href="/ensembles">Ensembles</a>
