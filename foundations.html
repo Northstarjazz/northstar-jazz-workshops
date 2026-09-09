@@ -22,15 +22,11 @@
   --blue: #a6c0d6;
   --coral-deep: #b03328;
   --navy: #3a4a6a;
-  --cream: #f1ebdc;
     --bg: #f1ebdc;
     --ink: #1a1714;
     --coral: #d04338;
     --sage: #b8c98a;
-    --ink-soft: #3d352a;
-    --ink-mute: #6b5f4c;
     --rule: #d4cab3;
-    --card-bg: #ebe3cf;
   }
 
   *, *::before, *::after { box-sizing: border-box; }
@@ -132,7 +128,7 @@
   .hero .lede {
     font-size: clamp(18px, 1.4vw, 21px);
     line-height: 1.55;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     max-width: 520px;
     margin: 0 0 40px 0;
   }
@@ -190,7 +186,7 @@
   .overview p {
     font-size: 19px;
     line-height: 1.65;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin: 0 0 22px 0;
   }
   .overview p:last-child { margin-bottom: 0; }
@@ -201,7 +197,7 @@
 
   /* ---------- DETAILS RIBBON (full-width band, simpler grid) ---------- */
   .details-band {
-    background: var(--card-bg);
+    background: var(--bg-3);
     padding: 72px 0;
   }
   .details-band h2 {
@@ -240,7 +236,7 @@
   }
   .detail-block .small {
     font-size: 14px;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin-top: 6px;
     display: block;
     font-weight: 400;
@@ -275,7 +271,7 @@
   .session .num {
     font-size: 11px;
     letter-spacing: 0.14em;
-    color: var(--ink-mute);
+    color: var(--dim);
     text-transform: uppercase;
     margin-bottom: 6px;
   }
@@ -304,7 +300,7 @@
   .why .why-intro {
     font-size: 19px;
     line-height: 1.65;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin: 0 0 36px 0;
   }
   .why .outcomes-lead {
@@ -376,14 +372,14 @@
     font-size: 13px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--ink-mute);
+    color: var(--dim);
     font-weight: 500;
   }
 
   /* ---------- TEACHERS (magazine: photo beside bio, side by side rows) ---------- */
   .teachers {
     padding: 100px 0;
-    background: var(--card-bg);
+    background: var(--bg-3);
   }
   .teachers .section-head {
     text-align: center;
@@ -447,7 +443,7 @@
   .teacher-body p {
     font-size: 16px;
     line-height: 1.6;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin: 0;
   }
 
@@ -495,14 +491,14 @@
     font-size: 12px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--ink-mute);
+    color: var(--dim);
     font-weight: 500;
     display: block;
     padding-left: 24px;
   }
   .quote-card .review-meta {
     font-size: 11px;
-    color: var(--ink-mute);
+    color: var(--dim);
     margin-top: 4px;
     padding-left: 24px;
     letter-spacing: 0.05em;
@@ -512,7 +508,7 @@
   /* ---------- ENROLLMENT ---------- */
   .enroll {
     padding: 100px 0;
-    background: var(--card-bg);
+    background: var(--bg-3);
   }
   .enroll .label {
     text-align: center;
@@ -531,7 +527,7 @@
     text-align: center;
     font-size: 19px;
     line-height: 1.55;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     max-width: 600px;
     margin: 0 auto 48px;
   }
@@ -570,7 +566,7 @@
   .path-card p {
     font-size: 14px;
     line-height: 1.5;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin: 0 0 20px 0;
     flex: 1;
   }
@@ -611,7 +607,7 @@
   .enroll-alt {
     text-align: center;
     font-size: 16px;
-    color: var(--ink-soft, #3d352a);
+    color: var(--ink-2, #3d352a);
     margin: 0 0 18px;
   }
   .enroll-alt a { color: var(--coral); border-bottom: 1px solid var(--coral); padding-bottom: 1px; }
@@ -619,7 +615,7 @@
   .contact-line {
     text-align: center;
     font-size: 14px;
-    color: var(--ink-mute);
+    color: var(--dim);
     max-width: 620px;
     margin: 0 auto;
   }

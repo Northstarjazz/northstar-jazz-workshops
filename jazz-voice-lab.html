@@ -37,16 +37,13 @@
   --blue: #a6c0d6;
   --coral-deep: #b03328;
   --navy: #3a4a6a;
-  --cream: #f1ebdc;
     --bg: #f1ebdc;
     --ink: #1a1714;
     --coral: #d04338;
     --sage: #b8c98a;
-    --ink-soft: #3d352a;
-    --ink-mute: #6b5f4c;
     --rule: #d4cab3;
-    --card-bg: #ebe3cf;
-  }
+  --coral-light: #e8785f;
+}
 
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: 80px; }
@@ -147,7 +144,7 @@
   .hero .lede {
     font-size: clamp(18px, 1.4vw, 21px);
     line-height: 1.55;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     max-width: 520px;
     margin: 0 0 40px 0;
   }
@@ -205,7 +202,7 @@
   .overview p {
     font-size: 19px;
     line-height: 1.65;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin: 0 0 22px 0;
   }
   .overview p:last-child { margin-bottom: 0; }
@@ -216,7 +213,7 @@
 
   /* ---------- DETAILS RIBBON (full-width band, simpler grid) ---------- */
   .details-band {
-    background: var(--card-bg);
+    background: var(--bg-3);
     padding: 72px 0;
   }
   .details-band h2 {
@@ -255,7 +252,7 @@
   }
   .detail-block .small {
     font-size: 14px;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin-top: 6px;
     display: block;
     font-weight: 400;
@@ -290,7 +287,7 @@
   .session .num {
     font-size: 11px;
     letter-spacing: 0.14em;
-    color: var(--ink-mute);
+    color: var(--dim);
     text-transform: uppercase;
     margin-bottom: 6px;
   }
@@ -330,7 +327,7 @@
     font-family: 'Lora', Georgia, serif;
     font-style: italic;
     font-size: 14px;
-    color: var(--ink-mute);
+    color: var(--dim);
     margin-top: 14px;
     line-height: 1.5;
   }
@@ -338,7 +335,7 @@
   /* ---------- IS THIS CLASS FOR YOU (prerequisites) ---------- */
   .prereqs {
     padding: 100px 0;
-    background: var(--card-bg);
+    background: var(--bg-3);
   }
   .prereqs .container-narrow .label {
     margin-bottom: 16px;
@@ -386,7 +383,7 @@
   .prereqs .prereq-note {
     font-size: 17px;
     line-height: 1.55;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     font-style: italic;
     margin: 0;
   }
@@ -410,7 +407,7 @@
   .why .why-intro {
     font-size: 19px;
     line-height: 1.65;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin: 0 0 36px 0;
   }
   .why .outcomes-lead {
@@ -482,14 +479,14 @@
     font-size: 13px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--ink-mute);
+    color: var(--dim);
     font-weight: 500;
   }
 
   /* ---------- TEACHERS (magazine: photo beside bio, side by side rows) ---------- */
   .teachers {
     padding: 100px 0;
-    background: var(--card-bg);
+    background: var(--bg-3);
   }
   .teachers .section-head {
     text-align: center;
@@ -553,7 +550,7 @@
   .teacher-body p {
     font-size: 16px;
     line-height: 1.6;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin: 0;
   }
 
@@ -601,14 +598,14 @@
     font-size: 12px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--ink-mute);
+    color: var(--dim);
     font-weight: 500;
     display: block;
     padding-left: 24px;
   }
   .quote-card .review-meta {
     font-size: 11px;
-    color: var(--ink-mute);
+    color: var(--dim);
     margin-top: 4px;
     padding-left: 24px;
     letter-spacing: 0.05em;
@@ -618,7 +615,7 @@
   /* ---------- ENROLLMENT ---------- */
   .enroll {
     padding: 100px 0;
-    background: var(--card-bg);
+    background: var(--bg-3);
   }
   .enroll .label {
     text-align: center;
@@ -637,7 +634,7 @@
     text-align: center;
     font-size: 19px;
     line-height: 1.55;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     max-width: 600px;
     margin: 0 auto 48px;
   }
@@ -676,7 +673,7 @@
   .path-card p {
     font-size: 14px;
     line-height: 1.5;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin: 0 0 20px 0;
     flex: 1;
   }
@@ -720,7 +717,7 @@
   .contact-line {
     text-align: center;
     font-size: 14px;
-    color: var(--ink-mute);
+    color: var(--dim);
     max-width: 620px;
     margin: 0 auto;
   }
@@ -995,7 +992,7 @@ img.duo-navy{filter:url(#duo-navy);} img.duo-coral{filter:url(#duo-coral);}
   padding: 12px 32px; display: flex; align-items: center; gap: 26px; font-family: 'Lora', Georgia, serif; }
 .fh-brand { font-family: 'Lora', Georgia, serif; font-weight: 700; font-size: 19px; color: #f1ebdc; text-decoration: none; letter-spacing: -0.005em; white-space: nowrap; flex-shrink: 0; display: inline-flex; flex-direction: column; align-items: flex-start; }
 .fh-brand .fh-top { display: inline-flex; align-items: baseline; gap: 6px; line-height: 1; }
-.fh-brand .fh-jazz { font-family: 'Caveat', cursive; font-weight: 700; font-size: 1.3em; color: #e8785f; line-height: 0.8; transform: translateY(1px); }
+.fh-brand .fh-jazz { font-family: 'Caveat', cursive; font-weight: 700; font-size: 1.3em; color: var(--coral-light); line-height: 0.8; transform: translateY(1px); }
 .fh-brand .fh-wmsub { font-size: 19px; font-weight: 700; letter-spacing: -0.005em; color: #f1ebdc; line-height: 1; margin-top: 3px; }
 .fh-brand:hover { opacity: 0.88; }
 .fh-links { display: flex; align-items: center; gap: 22px; margin: 0 auto; }
@@ -1059,7 +1056,7 @@ body.fh-menu-open .fh-item:nth-child(6) { transition-delay: 0.36s; }
 </defs></svg>
 
 <div class="top-banner">
-  <em>Open enrollment:</em> many of our summer classes are taking new students. <a href="#programs">See all &rarr;</a>
+  <em>Thu Sep 24:</em> our faculty play Berlin, Minneapolis. <a href="/events">Details &amp; tickets &rarr;</a>
 </div>
 
 <nav class="fh-nav" aria-label="Primary">

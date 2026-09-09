@@ -74,7 +74,6 @@
     --rule: #d4cab3;
     --coral: #d04338;
     --coral-deep: #b03328;
-    --cream: #f1ebdc;
   }
   *, *::before, *::after { box-sizing: border-box; }
   body {
@@ -115,7 +114,7 @@
     width: 64px; height: 64px;
     border-radius: 50%;
     background: var(--coral);
-    color: var(--cream);
+    color: var(--bg);
     margin: 0 auto 28px;
     display: flex; align-items: center; justify-content: center;
     font-size: 28px; line-height: 1;
@@ -136,7 +135,7 @@
   }
 
   .next-card {
-    background: var(--cream);
+    background: var(--bg);
     border: 1px solid var(--rule);
     border-radius: 4px;
     padding: 28px 28px;
@@ -156,13 +155,13 @@
     padding: 14px 26px;
     font-family: 'Lora', Georgia, serif;
     font-size: 16px; font-weight: 600; letter-spacing: 0.01em;
-    background: var(--coral); color: var(--cream);
+    background: var(--coral); color: var(--bg);
     border: 1px solid var(--coral);
     border-radius: 2px;
     transition: background .2s ease;
     cursor: pointer; text-align: center; line-height: 1.2;
   }
-  .btn:hover { background: var(--coral-deep); border-color: var(--coral-deep); text-decoration: none; color: var(--cream); }
+  .btn:hover { background: var(--coral-deep); border-color: var(--coral-deep); text-decoration: none; color: var(--bg); }
 
   .quiet-line {
     margin: 24px 0 0;
@@ -171,11 +170,11 @@
   }
 
   .foot {
-    background: var(--ink); color: var(--cream);
+    background: var(--ink); color: var(--bg);
     text-align: center; padding: 32px 28px;
     font-size: 14px;
   }
-  .foot a { color: var(--cream); }
+  .foot a { color: var(--bg); }
 
   @media (max-width: 600px) {
     main { padding: 48px 20px; }

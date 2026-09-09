@@ -44,10 +44,8 @@
     --coral-deep: #b03328;
     --navy: #3a4a6a;
     /* back-compat aliases (preview variable names) */
-    --ink-soft: var(--ink-2);
-    --ink-mute: var(--dim);
-    --card-bg: var(--bg-3);
-  }
+  --coral-light: #e8785f;
+}
 
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: 76px; }
@@ -236,7 +234,7 @@
   .approach p {
     font-size: 19px;
     line-height: 1.65;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin: 0 0 24px 0;
   }
   .approach p:last-child { margin-bottom: 0; }
@@ -244,7 +242,7 @@
   /* Pull quote */
   .pullquote-section {
     padding: 60px 0;
-    background: var(--card-bg);
+    background: var(--bg-3);
   }
   .pullquote {
     text-align: center;
@@ -281,7 +279,7 @@
     font-size: 13px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--ink-mute);
+    color: var(--dim);
     font-weight: 500;
   }
 
@@ -302,7 +300,7 @@
   .ways .subhead-text {
     text-align: center;
     font-size: 18px;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     max-width: 600px;
     margin: 0 auto 60px;
   }
@@ -314,7 +312,7 @@
     margin: 0 auto;
   }
   .way {
-    background: var(--card-bg);
+    background: var(--bg-3);
     border: 1px solid var(--rule);
     overflow: hidden;
     display: flex;
@@ -343,7 +341,7 @@
   .way p {
     font-size: 15px;
     line-height: 1.55;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin: 0;
   }
   .way ul {
@@ -352,7 +350,7 @@
     list-style: none;
     font-size: 14px;
     line-height: 1.65;
-    color: var(--ink-mute);
+    color: var(--dim);
   }
   .way ul li {
     padding: 1px 0;
@@ -361,7 +359,7 @@
     text-align: center;
     margin-top: 56px;
     font-style: italic;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     font-size: 17px;
     max-width: 620px;
     margin-left: auto;
@@ -372,7 +370,7 @@
   /* Testimonials */
   .testimonials {
     padding: 100px 0;
-    background: var(--card-bg);
+    background: var(--bg-3);
   }
   .testimonials h2 {
     font-family: 'Lora', Georgia, serif;
@@ -387,7 +385,7 @@
   .testimonials .subhead-text {
     text-align: center;
     font-size: 18px;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin: 0 auto 60px;
     max-width: 560px;
   }
@@ -416,13 +414,13 @@
     font-size: 12px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--ink-mute);
+    color: var(--dim);
     font-weight: 500;
     display: block;
   }
   .quote-card .review-meta {
     font-size: 11px;
-    color: var(--ink-mute);
+    color: var(--dim);
     margin-top: 4px;
     letter-spacing: 0.05em;
     font-style: italic;
@@ -445,7 +443,7 @@
   .photo-strip .subhead-text {
     text-align: center;
     font-size: 17px;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin: 0 auto 48px;
     max-width: 560px;
   }
@@ -472,7 +470,7 @@
   }
   .photo-caption-row .caption {
     font-size: 13px;
-    color: var(--ink-mute);
+    color: var(--dim);
     font-style: italic;
     text-align: center;
   }
@@ -480,7 +478,7 @@
   /* Form */
   .form-section {
     padding: 100px 0;
-    background: var(--card-bg);
+    background: var(--bg-3);
   }
   .form-section .label {
     text-align: center;
@@ -499,7 +497,7 @@
     text-align: center;
     font-size: 19px;
     line-height: 1.55;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     max-width: 620px;
     margin: 0 auto 32px;
   }
@@ -536,7 +534,7 @@
   .path-card p {
     font-size: 14px;
     line-height: 1.5;
-    color: var(--ink-soft);
+    color: var(--ink-2);
     margin: 0 0 16px 0;
   }
   .path-card a.btn {
@@ -601,7 +599,7 @@
     margin-left: 2px;
   }
   label .opt {
-    color: var(--ink-mute);
+    color: var(--dim);
     font-weight: 400;
     font-style: italic;
     font-size: 13px;
@@ -948,7 +946,7 @@
   padding: 12px 32px; display: flex; align-items: center; gap: 26px; font-family: 'Lora', Georgia, serif; }
 .fh-brand { font-family: 'Lora', Georgia, serif; font-weight: 700; font-size: 19px; color: #f1ebdc; text-decoration: none; letter-spacing: -0.005em; white-space: nowrap; flex-shrink: 0; display: inline-flex; flex-direction: column; align-items: flex-start; }
 .fh-brand .fh-top { display: inline-flex; align-items: baseline; gap: 6px; line-height: 1; }
-.fh-brand .fh-jazz { font-family: 'Caveat', cursive; font-weight: 700; font-size: 1.3em; color: #e8785f; line-height: 0.8; transform: translateY(1px); }
+.fh-brand .fh-jazz { font-family: 'Caveat', cursive; font-weight: 700; font-size: 1.3em; color: var(--coral-light); line-height: 0.8; transform: translateY(1px); }
 .fh-brand .fh-wmsub { font-size: 19px; font-weight: 700; letter-spacing: -0.005em; color: #f1ebdc; line-height: 1; margin-top: 3px; }
 .fh-brand:hover { opacity: 0.88; }
 .fh-links { display: flex; align-items: center; gap: 22px; margin: 0 auto; }
@@ -1380,7 +1378,7 @@ body.fh-menu-open .fh-item:nth-child(6) { transition-delay: 0.36s; }
 
     </form>
 
-    <p style="text-align: center; margin-top: 32px; font-size: 14px; color: var(--ink-mute);">Questions? Email us anytime at <a href="mailto:hello@northstarjazzworkshops.com">hello@northstarjazzworkshops.com</a>.</p>
+    <p style="text-align: center; margin-top: 32px; font-size: 14px; color: var(--dim);">Questions? Email us anytime at <a href="mailto:hello@northstarjazzworkshops.com">hello@northstarjazzworkshops.com</a>.</p>
 
   </div>
 </section>

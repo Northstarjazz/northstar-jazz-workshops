@@ -42,6 +42,7 @@
   --coral: #d04338;
   --coral-deep: #b03328;
   --navy: #3a4a6a;
+  --coral-light: #e8785f;
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 76px; }
@@ -271,7 +272,7 @@ em.accent { font-style: italic; color: var(--coral); }
 
 /* ===== MORE UPCOMING / GRID ===== */
 .featured-empty {
-    background: var(--cream);
+    background: var(--bg);
     border-radius: 8px;
     border: 1px solid var(--rule);
     padding: 56px 48px;
@@ -530,7 +531,7 @@ footer a:hover { color: var(--coral); text-decoration: none; }
   padding: 12px 32px; display: flex; align-items: center; gap: 26px; font-family: 'Lora', Georgia, serif; }
 .fh-brand { font-family: 'Lora', Georgia, serif; font-weight: 700; font-size: 19px; color: #f1ebdc; text-decoration: none; letter-spacing: -0.005em; white-space: nowrap; flex-shrink: 0; display: inline-flex; flex-direction: column; align-items: flex-start; }
 .fh-brand .fh-top { display: inline-flex; align-items: baseline; gap: 6px; line-height: 1; }
-.fh-brand .fh-jazz { font-family: 'Caveat', cursive; font-weight: 700; font-size: 1.3em; color: #e8785f; line-height: 0.8; transform: translateY(1px); }
+.fh-brand .fh-jazz { font-family: 'Caveat', cursive; font-weight: 700; font-size: 1.3em; color: var(--coral-light); line-height: 0.8; transform: translateY(1px); }
 .fh-brand .fh-wmsub { font-size: 19px; font-weight: 700; letter-spacing: -0.005em; color: #f1ebdc; line-height: 1; margin-top: 3px; }
 .fh-brand:hover { opacity: 0.88; }
 .fh-links { display: flex; align-items: center; gap: 22px; margin: 0 auto; }
@@ -662,17 +663,35 @@ body.fh-menu-open .fh-item:nth-child(6) { transition-delay: 0.36s; }
 
 <!-- FEATURED UPCOMING EVENT
      The nearest upcoming event (within ~30 days) gets this hero-sized treatment.
-     When a new headline workshop is on the books, restore the featured-card block here
-     (template preserved in git history; see the June 2026 Otherlands version). -->
+     When this event passes, move it down to "Past events" and promote the next one here.
+     If nothing is on the books, swap this block for the .featured-empty version
+     (preserved in git history; see the pre-September-2026 revisions of this file).
+     No .featured-poster here — we have no artwork for the Berlin show. Add one above
+     .featured-date when a flyer exists; the markup is in the Otherlands version in git. -->
 <section class="featured">
   <div class="container">
-    <div class="featured-empty reveal">
+    <div class="featured-card reveal">
       <span class="featured-flag"><span class="dot"></span>Next up</span>
-      <h2>Nothing on the calendar &mdash; <em>yet.</em></h2>
-      <p class="featured-empty-lede">We&rsquo;re booking the next round of visiting-artist workshops and concerts. The fastest way to hear about the next one is to tell us you&rsquo;re interested.</p>
+      <div class="featured-date">Thursday, September 24, 2026</div>
+      <h2>Faculty Night at <em>Berlin</em></h2>
+      <p class="featured-performers">The people you study with, on a bandstand. Our teaching faculty take over <strong>Berlin</strong> in the North Loop for an evening of standards, originals, and small-group playing. Come hear what your teachers sound like when it's their turn.</p>
+      <div class="featured-facts">
+        <div class="fact">
+          <div class="fact-label">When</div>
+          <div class="fact-val">7:00 &ndash; 9:30 PM<span class="sub">Thursday, Sept 24</span></div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Where</div>
+          <div class="fact-val">Berlin<span class="sub">204 N 1st St, Minneapolis</span></div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Admission</div>
+          <div class="fact-val">$25 / $20<span class="sub">General / North Star members</span></div>
+        </div>
+      </div>
       <div class="featured-cta-row" style="margin-top: 8px;">
-        <a href="/#get-started" class="btn-primary">Get on the list &rarr;</a>
-        <a href="mailto:hello@northstarjazzworkshops.com" class="btn-outline">Email us</a>
+        <a href="https://www.berlinmpls.com/calendar/north-star-jazz-work-faculty-show-september-2026" target="_blank" rel="noopener noreferrer" class="btn-primary">Tickets at Berlin &rarr;</a>
+        <a href="mailto:hello@northstarjazzworkshops.com" class="btn-outline">Members: ask about the discount</a>
       </div>
     </div>
   </div>
