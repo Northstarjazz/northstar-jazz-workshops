@@ -92,4 +92,9 @@
     <priority>0.4</priority>
   </url>
 
+  <url>
+    <loc>https://northstarjazzworkshops.com/events/michael-ragonese-trio</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
