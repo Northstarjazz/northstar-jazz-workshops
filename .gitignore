@@ -10,3 +10,7 @@
 # Node / build artifacts (we have no build, but future-proof)
 node_modules/
 .netlify/
+
+# Scratch: temp photo staging and local backups
+_ptmp/
+*.backup.html
